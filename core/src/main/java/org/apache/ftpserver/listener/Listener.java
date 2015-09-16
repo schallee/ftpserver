@@ -44,7 +44,7 @@ public interface Listener {
      * requests.
      * @param serverContext The current {@link FtpServerContext}
      * 
-     * @throws Exception
+     * @throws RuntimeException
      *             On error during start up
      */
     void start(FtpServerContext serverContext);
@@ -162,13 +162,13 @@ public interface Listener {
 	 *         provided for backward compatibility purpose only.
      */
     List<Subnet> getBlockedSubnets();
-    
+
     /**
-	 * Returns the IP filter associated with this listener. May return
-	 * <code>null</code>.
-	 * 
-	 * @return the IP filter associated with this listener. May return
-	 *         <code>null</code>.
-	 */
-	IpFilter getIpFilter();
+     * Returns the <code>SessionFilter</code> associated with this listener. May
+     * return <code>null</code>.
+     * 
+     * @return the <code>SessionFilter</code> associated with this listener. May
+     *         return <code>null</code>.
+     */
+    SessionFilter getSessionFilter();
 }
