@@ -164,11 +164,11 @@ public interface Listener {
     List<Subnet> getBlockedSubnets();
 
     /**
-     * Returns the <code>SessionFilter</code> associated with this listener. May
+     * Returns the <code>IpFilter</code> associated with this listener. May
      * return <code>null</code>.
      * 
-     * @return the <code>SessionFilter</code> associated with this listener. May
+     * @return the <code>IpFilter</code> associated with this listener. May
      *         return <code>null</code>.
      */
-    SessionFilter getSessionFilter();
+    IpFilter getIpFilter();
 }
